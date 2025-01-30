@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import * as joi from 'joi';
 
-export function validateEnvVars<T extends joi.SchemaMap>(envsValidations: T): joi.ObjectSchema<T> {
+export function validateEnvVars<T extends joi.SchemaMap>(envsValidations: T): any {
     const envVarsSchema = joi.object(envsValidations).unknown(true);
 
     const { error, value: validatedEnvVars } = envVarsSchema.validate(process.env, { abortEarly: false });
