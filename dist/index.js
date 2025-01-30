@@ -16,3 +16,4 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 require("reflect-metadata");
 __exportStar(require("./dto/pagination.dto"), exports);
+__exportStar(require("./config/envs"), exports);
